@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationSubTitle.Text" xml:space="preserve">
+    <value>صاف ستھرے اور زیادہ سبز جگہوں کے لئے مل کر کام</value>
+  </data>
+  <data name="ApplicationTitle.Text" xml:space="preserve">
+    <value>گلیوں کو سبز اور صاف رکھیں</value>
+  </data>
+  <data name="ImageSetFromStorage" xml:space="preserve">
+    <value> تصویر ذخیرہ سے ملی ہے</value>
+  </data>
+  <data name="KnowAboutUs" xml:space="preserve">
+    <value>ہمارے بارے میں جانیں</value>
+  </data>
+  <data name="LayoutDirection" xml:space="preserve">
+    <value>RTL</value>
+  </data>
+  <data name="lblAbout.Text" xml:space="preserve">
+    <value>ہمارے بارے میں</value>
+  </data>
+  <data name="lblAboutus" xml:space="preserve">
+    <value>ہمارے بارے میں</value>
+  </data>
+  <data name="lblBuildingNo/Location.Header" xml:space="preserve">
+    <value>عمارت نمبر اور محل وقوع</value>
+  </data>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>تفصیلات</value>
+  </data>
+  <data name="lblDistrict.Text" xml:space="preserve">
+    <value>محلہ/ضلع</value>
+  </data>
+  <data name="lblEnterdistrictname.PlaceholderText" xml:space="preserve">
+    <value>محلہ کا نام درج کریں</value>
+  </data>
+  <data name="lblEnterstreetname.PlaceholderText" xml:space="preserve">
+    <value>سڑک/ گلی کا نام درج کریں</value>
+  </data>
+  <data name="lblEnteryourobservation.PlaceholderText" xml:space="preserve">
+    <value>اپنا مشاہدہ درج کریں</value>
+  </data>
+  <data name="lblform" xml:space="preserve">
+    <value>اندراج فارم</value>
+  </data>
+  <data name="lblHelp" xml:space="preserve">
+    <value>تکنیکی مدد</value>
+  </data>
+  <data name="lblHelpTxt.Text" xml:space="preserve">
+    <value>دستاویزی مدد</value>
+  </data>
+  <data name="lblLatitude/Long.Text" xml:space="preserve">
+    <value>عرض البلد/طول</value>
+  </data>
+  <data name="lblMyreports.Header" xml:space="preserve">
+    <value>میری رپورٹیں</value>
+  </data>
+  <data name="lblNeedhelptosubmitreport" xml:space="preserve">
+    <value>رپورٹ جمع کروانے کے لیے مدد کی ضرورت ہے</value>
+  </data>
+  <data name="lblObservation.Text" xml:space="preserve">
+    <value>مشاہدات</value>
+  </data>
+  <data name="lblPickerDate.Header" xml:space="preserve">
+    <value>تلاش کی اصطلاح</value>
+  </data>
+  <data name="lblPublishedbyCKAT.Text" xml:space="preserve">
+    <value>واجد خان کی طرف سے شائع کیا -CKAT</value>
+  </data>
+  <data name="lblReportcanbesearchedusingthedatepicker.Text" xml:space="preserve">
+    <value>رپورٹ تلاش کے لیے   ایپلی کیشن  کے بائیں والے حصے کا استعمال ہو سکتا ہے ۔ ایک مرتبہ آپ اپنی ان پٹ تاریخ منتخب کریں اور ٹھیک ہے بٹن پر کلک کریں ۔ نظام ان پٹ کی تاریخ پر مبنی تمام رپورٹ تلاش کرے گا ۔</value>
+  </data>
+  <data name="lblSaveReport.Content" xml:space="preserve">
+    <value>رپورٹ محفوظ کریں</value>
+  </data>
+  <data name="lblSearchreport.Header" xml:space="preserve">
+    <value>رپورٹ تلاش کریں</value>
+  </data>
+  <data name="lblSearchreports" xml:space="preserve">
+    <value>رپورٹ تلاش کریں</value>
+  </data>
+  <data name="lblSearchreportsHelp.Text" xml:space="preserve">
+    <value>رپورٹ تلاش کریں</value>
+  </data>
+  <data name="lblSelectdate" xml:space="preserve">
+    <value>تاریخ منتخب کریں</value>
+  </data>
+  <data name="lblSharereport.Text" xml:space="preserve">
+    <value>رپورٹ بھیجیں</value>
+  </data>
+  <data name="lblShowmyreports" xml:space="preserve">
+    <value>میری رپورٹیں دیکھائیں</value>
+  </data>
+  <data name="lblShowReport" xml:space="preserve">
+    <value>رپورٹیں دیکھائیں</value>
+  </data>
+  <data name="lblShowReportHelp.Text" xml:space="preserve">
+    <value>رپورٹیں دیکھائیں</value>
+  </data>
+  <data name="lblShowreportwilldisplayallyourlocallysavedreports.Text" xml:space="preserve">
+    <value>آپ اپنے مقامی طور پر محفوظ کردہ رپورٹس کسی کے ساتھ ارسال بٹن پر کلک کرکے جمع کروا سکتے ہیں ۔ ہم یہ ای میل بھیجنے کے استعمال کو ترجیح دیتے ہیں ۔</value>
+  </data>
+  <data name="lblStatusmessage.Text" xml:space="preserve">
+    <value> حالت نظام کے پیغام</value>
+  </data>
+  <data name="lblStreet.Text" xml:space="preserve">
+    <value>گلی</value>
+  </data>
+  <data name="lblSubmitReport.Content" xml:space="preserve">
+    <value>رپورٹ ارسال کریں</value>
+  </data>
+  <data name="lblSubmitReportHelp.Text" xml:space="preserve">
+    <value>رپورٹ ارسال کریں</value>
+  </data>
+  <data name="lblSubmitShareReport.Content" xml:space="preserve">
+    <value>رپورٹ ارسال کریں</value>
+  </data>
+  <data name="lblTakePicture.Content" xml:space="preserve">
+    <value>تصویر لیں</value>
+  </data>
+  <data name="lblTasks.Header" xml:space="preserve">
+    <value>کام</value>
+  </data>
+  <data name="lblTechinical support/feedbackemail.Text" xml:space="preserve">
+    <value>تکنیکی معاونت/آراء ای میل: support@mwmsr.net</value>
+  </data>
+  <data name="lblThisisanonofficialRiyadhcitystreetscleaningobservationAp.Text" xml:space="preserve">
+    <value>یہ ایپلی کیشن شہر سڑکوں/گلیوں  کے روز مرہ کے مشاہدات کے بارے میں ہے ۔یہ ایپلی کیشن ہمارے شہروں کو زیادہ صاف اور سبز   جگہ بنانے میں مدد  د ے گی ۔</value>
+  </data>
+  <data name="lblThisisgeneralguidelines.Text" xml:space="preserve">
+    <value>یہ عمومی ہدایات ایپلی کیشن کی خصوصیات کو استعمال کرنے کا طریقہ ہے ۔</value>
+  </data>
+  <data name="lblUpdateReport.Content" xml:space="preserve">
+    <value>رپورٹ کی تازہ کاری کریں</value>
+  </data>
+  <data name="lblYoumayaddnewreporttotheapplication.Text" xml:space="preserve">
+    <value>رپورٹ جمع کرائیں پر کلک کرنے پر ایپلی کیشن نئی رپورٹ شامل کرے گی  ۔ ایک بار جب آپ  کلک کریں یہ آپ کو  تفصیل  صفحے پر  لے جائے گا-  جہاں آپ نے سڑک کا نام محلہ/ضلع کے نام اور مشاہدے کے نام داخل کر سکتے ہیں۔نظام اپنا محل وقوع GPS کے ذریعے خود بخود ریکارڈ کرے  گا</value>
+  </data>
+  <data name="lblYoumayshare/submityourreporttoanyone.Text" xml:space="preserve">
+    <value>آپ کسی کو بھی ارسال بٹن استعمال کرنے کے لئے اپنی رپورٹ جمع کروانا ہے ۔ پھر اپنی رپورٹ تصویر اور محل وقوع کی تفصیلات کے ساتھ بھیجنے کے لیے ڈاک ایپلی کیشن منتخب کریں ۔</value>
+  </data>
+  <data name="lblYoumaysubmittheRiyadhcitystreetobservation" xml:space="preserve">
+    <value>آپ شہر کے گلی مشاہدات کی جمع کرا سکتے ہیں</value>
+  </data>
+  <data name="msgImageCapture" xml:space="preserve">
+    <value>کامیابی کے ساتھ لی گئی تصویر</value>
+  </data>
+  <data name="msgImageSaved" xml:space="preserve">
+    <value>لیا گیا نقش تصویر محفوظ</value>
+  </data>
+  <data name="msgNoCapture" xml:space="preserve">
+    <value>نہیں لی گئی تصویر</value>
+  </data>
+  <data name="msgNoPhotoSaved" xml:space="preserve">
+    <value>تصویر محفوظ نہیں</value>
+  </data>
+  <data name="msgPhotoFirst" xml:space="preserve">
+    <value>برائے مہربانی پہلے تصویر لیں</value>
+  </data>
+  <data name="NoImageExist" xml:space="preserve">
+    <value>نقش موجود نہیں ہے ۔</value>
+  </data>
+  <data name="NoImageFound" xml:space="preserve">
+    <value>نقش موجود نہیں ہے ۔</value>
+  </data>
+  <data name="NoRecordFound" xml:space="preserve">
+    <value>کوئی ریکارڈ نہیں ملا!</value>
+  </data>
+  <data name="obsSaved" xml:space="preserve">
+    <value>مشاہدہ محفوظ</value>
+  </data>
+  <data name="obsUpdate" xml:space="preserve">
+    <value>مشاہدے کی تازہ کاری</value>
+  </data>
+  <data name="PleaseSelectMail" xml:space="preserve">
+    <value>براہ مہربانی ای میل بھیجنے کے لیے ڈاک ربط منتخب کریں</value>
+  </data>
+  <data name="plsEnterObservation" xml:space="preserve">
+    <value>فہرست سے مشاہدے کا انتخاب کریں</value>
+  </data>
+  <data name="plsEnterStreet" xml:space="preserve">
+    <value>سڑک/ گلی کا نام درج کریں</value>
+  </data>
+  <data name="SubmitReport" xml:space="preserve">
+    <value>رپورٹ ارسال کریں</value>
+  </data>
+</root>

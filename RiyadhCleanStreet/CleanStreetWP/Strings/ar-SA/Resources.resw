@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationSubTitle.Text" xml:space="preserve">
+    <value>نعمل معاً لأماكن أكثر أنظف و اخضراراً</value>
+  </data>
+  <data name="ApplicationTitle.Text" xml:space="preserve">
+    <value>أحب تنظيف شوارع الرياض</value>
+  </data>
+  <data name="LayoutDirection" xml:space="preserve">
+    <value>RTL</value>
+  </data>
+  <data name="lblAboutus" xml:space="preserve">
+    <value>من نحن</value>
+  </data>
+  <data name="lblBuildingNo/Location.Header" xml:space="preserve">
+    <value>بناء رقم / موقع</value>
+  </data>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="lblDistrict.Text" xml:space="preserve">
+    <value>الحي</value>
+  </data>
+  <data name="lblEnterdistrictname.PlaceholderText" xml:space="preserve">
+    <value>أدخل اسم الحي</value>
+  </data>
+  <data name="lblEnterstreetname.PlaceholderText" xml:space="preserve">
+    <value>أدخل اسم الشارع</value>
+  </data>
+  <data name="lblEnteryourobservation.PlaceholderText" xml:space="preserve">
+    <value>أدخل ملاحظتك</value>
+  </data>
+  <data name="lblform" xml:space="preserve">
+    <value>النموذج</value>
+  </data>
+  <data name="lblHelp" xml:space="preserve">
+    <value>مساعدة</value>
+  </data>
+  <data name="lblLatitude/Long.Text" xml:space="preserve">
+    <value>خط العرض/ الطول</value>
+  </data>
+  <data name="lblMyreports.Header" xml:space="preserve">
+    <value>تقاريري</value>
+  </data>
+  <data name="lblNeedhelptosubmitreport" xml:space="preserve">
+    <value>بحاجة إلى مساعدة لتقديم التقرير</value>
+  </data>
+  <data name="lblObservation.Text" xml:space="preserve">
+    <value>الملاحظة</value>
+  </data>
+  <data name="lblPickerDate.Header" xml:space="preserve">
+    <value>كلمة البحث</value>
+  </data>
+  <data name="lblPublishedbyCKAT.Text" xml:space="preserve">
+    <value>نشرتها  CKAT</value>
+  </data>
+  <data name="lblReportcanbesearchedusingthedatepicker.Text" xml:space="preserve">
+    <value>يمكن البحث في التقرير باستخدام منتقي التاريخ في الجزء الأيمن من التطبيق الخاص بك. بمجرد انك قمت بتحديد تاريخ الإدخال والنقر على الزر "موافق" النظام سيتم البحث لجميع التقرير استناداً إلى تاريخ الإدخال.</value>
+  </data>
+  <data name="lblSaveReport.Content" xml:space="preserve">
+    <value>حفظ التقرير</value>
+  </data>
+  <data name="lblSearchreport.Header" xml:space="preserve">
+    <value>بحث التقارير</value>
+  </data>
+  <data name="lblSearchreports" xml:space="preserve">
+    <value> بحث التقارير</value>
+  </data>
+  <data name="lblSelectdate" xml:space="preserve">
+    <value>حدد تاريخ</value>
+  </data>
+  <data name="lblSharereport.Text" xml:space="preserve">
+    <value>تقاسم التقرير</value>
+  </data>
+  <data name="lblShowmyreports" xml:space="preserve">
+    <value>إظهار التقارير الخاصة بي</value>
+  </data>
+  <data name="lblShowReport" xml:space="preserve">
+    <value>عرض تقرير</value>
+  </data>
+  <data name="lblShowreportwilldisplayallyourlocallysavedreports.Text" xml:space="preserve">
+    <value>إظهار التقرير سيتم عرض جميع التقارير المحفوظة محلياً الخاص بك و قد تقدم لك/مشاركة تقرير مع أي شخص عن طريق مشاركة التعاقد أو يقدم عن طريق النقر على زر أثناء وجودك في صفحة تفاصيل التقرير.</value>
+  </data>
+  <data name="lblStatusmessage.Text" xml:space="preserve">
+    <value>رسالة الحالة</value>
+  </data>
+  <data name="lblStreet.Text" xml:space="preserve">
+    <value>الشارع</value>
+  </data>
+  <data name="lblTakePicture.Content" xml:space="preserve">
+    <value>التقاط الصورة</value>
+  </data>
+  <data name="lblTasks.Header" xml:space="preserve">
+    <value>المهام</value>
+  </data>
+  <data name="lblTechinical support/feedbackemail.Text" xml:space="preserve">
+    <value>الدعم الفني - البريد الإلكتروني: support@mwmsr.net</value>
+  </data>
+  <data name="lblThisisanonofficialRiyadhcitystreetscleaningobservationAp.Text" xml:space="preserve">
+    <value>هذه تطبيق أحب تنظيف شوارع الرياض هو تسجيل المراقبة الميدانية غير رسمية لجعل الرياض مكاناً أكثر نظافة وأكثر خضرة وجميلة.</value>
+  </data>
+  <data name="lblThisisgeneralguidelines.Text" xml:space="preserve">
+    <value>هذه هي المبادئ التوجيهية العامة لكيفية استخدام وظائف التطبيق.</value>
+  </data>
+  <data name="lblYoumayaddnewreporttotheapplication.Text" xml:space="preserve">
+    <value>يمكنك إضافة تقرير جديد إلى التطبيق عند النقر فوق إرسال عنوان التقرير على الشاشة الرئيسية. بمجرد النقر فوق العنوان هذا سوف يظهر لك في صفحة تفاصيل تقديم التقرير حيث يمكنك إدخال اسم الشارع اسم الحي واسم المراقبة. تأخذ صورة الملاحظة وتقوم حفظ السجل في التخزين المحلي الخاص بك، و سوف يقوم النظام  يأخذ معلومات إضافية للموقع إذا سمح بها المستخدم لوضع علامة الصورة في الموقع الحالي.</value>
+  </data>
+  <data name="lblYoumayshare/submityourreporttoanyone.text" xml:space="preserve">
+    <value> وقد يمكنك مشاركة/إرسال التقرير الخاص بك إلى أي شخص باستخدام الزر إرسال على صفحة تفاصيل التقرير. في موقع المشاركة الرجاء تحديد تطبيق البريد لمشاركة التقرير الخاص بك مع تفاصيل الصورة، والمكان.</value>
+  </data>
+  <data name="lblYoumaysubmittheRiyadhcitystreetobservation" xml:space="preserve">
+    <value>يمكنك إرسال ملاحظة الشوارع مدينة الرياض</value>
+  </data>
+  <data name="KnowAboutUs" xml:space="preserve">
+    <value>تريد أن تعرف عنا</value>
+  </data>
+  <data name="SubmitReport" xml:space="preserve">
+    <value>تقديم تقرير</value>
+  </data>
+  <data name="lblHelpTxt.Text" xml:space="preserve">
+    <value>مساعدة</value>
+  </data>
+  <data name="lblSearchreportsHelp.Text" xml:space="preserve">
+    <value>بحث التقارير</value>
+  </data>
+  <data name="lblShowReportHelp.Text" xml:space="preserve">
+    <value>عرض تقرير</value>
+  </data>
+  <data name="lblSubmitReport.Content" xml:space="preserve">
+    <value>تقديم تقرير</value>
+  </data>
+  <data name="lblSubmitReportHelp.Text" xml:space="preserve">
+    <value>تقديم تقرير</value>
+  </data>
+  <data name="lblSubmitShareReport.Content" xml:space="preserve">
+    <value>تقديم تقرير</value>
+  </data>
+  <data name="lblUpdateReport.Content" xml:space="preserve">
+    <value>تحديث التقرير</value>
+  </data>
+  <data name="lblAbout.Text" xml:space="preserve">
+    <value>من نحن</value>
+  </data>
+  <data name="ImageSetFromStorage" xml:space="preserve">
+    <value>خذ الصورة من التخزين</value>
+  </data>
+  <data name="msgImageCapture" xml:space="preserve">
+    <value>الصورة التي تم التقاطها بنجاح</value>
+  </data>
+  <data name="msgImageSaved" xml:space="preserve">
+    <value>صورة تم الحفظ المجلد صورة</value>
+  </data>
+  <data name="msgNoCapture" xml:space="preserve">
+    <value>لا تؤخذ الصورة</value>
+  </data>
+  <data name="msgNoPhotoSaved" xml:space="preserve">
+    <value>لم يتم حفظ</value>
+  </data>
+  <data name="msgPhotoFirst" xml:space="preserve">
+    <value>يرجى أخذ الصورة الأولى</value>
+  </data>
+  <data name="NoImageExist" xml:space="preserve">
+    <value>لا يوجد صورة</value>
+  </data>
+  <data name="NoImageFound" xml:space="preserve">
+    <value>لا يوجد صورة</value>
+  </data>
+  <data name="NoRecordFound" xml:space="preserve">
+    <value>لا يوجد سجل</value>
+  </data>
+  <data name="obsSaved" xml:space="preserve">
+    <value>تم الحفظ الملاحظة</value>
+  </data>
+  <data name="obsUpdate" xml:space="preserve">
+    <value>تحديث الملاحظة</value>
+  </data>
+  <data name="PleaseSelectMail" xml:space="preserve">
+    <value>الرجاء اختر رابط البريد لإرسال البريد الإلكتروني</value>
+  </data>
+  <data name="plsEnterObservation" xml:space="preserve">
+    <value>يرجى الملاحظة اختيار من القائمة</value>
+  </data>
+  <data name="plsEnterStreet" xml:space="preserve">
+    <value>الرجاء أدخل اسم الشارع</value>
+  </data>
+  <data name="lblAppBarAbout.Label" xml:space="preserve">
+    <value>حول</value>
+  </data>
+  <data name="lblAppBarHelp.Label" xml:space="preserve">
+    <value>مساعدة</value>
+  </data>
+  <data name="lblAppBarHome.Label" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="lblPleaseTakePicture.Text" xml:space="preserve">
+    <value>يرجى التقاط الصورة لتقريرك</value>
+  </data>
+  <data name="lblSaveReport.Label" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="lblSharereportAppBar.Label" xml:space="preserve">
+    <value>إرسال</value>
+  </data>
+  <data name="lblUpdateReport.Label" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+</root>

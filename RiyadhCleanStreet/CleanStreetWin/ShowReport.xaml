@@ -1,0 +1,97 @@
+﻿<Page
+    x:Class="CleanStreetWin.ShowReport"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CleanStreetWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bm="using:Bing.Maps"
+    mc:Ignorable="d">
+
+    <Grid Background="#004133">
+        <Grid x:Name="mainGrid" Margin="30,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Margin="0,30,0,0" Grid.Row="0" Grid.Column="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <AppBarButton Name="BackButton" Icon="Back" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" VerticalAlignment="Center" Click="BackButton_Click" HorizontalAlignment="Left" ></AppBarButton>
+                <TextBlock x:Uid="ApplicationTitle" x:Name="PageHeaderTextBlock" Text="Love Riyadh Clean Streets" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
+                <TextBlock x:Uid="ApplicationSubTitle" x:Name="PageSubHeaderTextBlock" Text="Working together for cleaner and greener places" FontSize="14.667" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"></TextBlock>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1" Margin="20,0,0,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"></ColumnDefinition>
+                    <ColumnDefinition Width="500*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock  x:Uid="lblStreet" Style="{StaticResource TitleTextBlockStyle}" Grid.Row="1" Grid.Column="0">Street</TextBlock>
+                <TextBox Text="{Binding StreetName, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Margin="0,0,0,10"></TextBox>
+
+                <TextBlock x:Uid="lblDistrict" Style="{StaticResource TitleTextBlockStyle}" Grid.Row="2" Grid.Column="0">District</TextBlock>
+                <TextBox  Text="{Binding DistrictName, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"  Margin="0,0,0,10"></TextBox>
+
+                <TextBlock x:Uid="lblObservation" Style="{StaticResource TitleTextBlockStyle}" Grid.Row="3" Grid.Column="0">Observation</TextBlock>
+                <TextBox Grid.Row="3" Text="{Binding ObservationName, Mode=OneWay}" Grid.Column="1" Margin="0,0,0,10"></TextBox>
+
+                <TextBlock x:Uid="lblDescription" Style="{StaticResource TitleTextBlockStyle}" Grid.Row="4" Grid.Column="0">Description</TextBlock>
+                <TextBox  Text="{Binding Description, Mode=TwoWay}"  Grid.Row="4" Grid.Column="1" Margin="0,0,0,10" Height="100" TextWrapping="Wrap"  AcceptsReturn="True"  ScrollViewer.VerticalScrollBarVisibility="Visible"></TextBox>
+
+                <Grid Grid.Row="5" Grid.Column="1" Margin="0,0,0,10" Height="300">
+                    <bm:Map VerticalAlignment="Stretch" FlowDirection="LeftToRight" Credentials="As3-iIE1YMf0SjuHEno5yZKheFn5x1ke3gVFxFOcozaCms2bM0dkBzCCuqpmlDNT" x:Name="myMap"></bm:Map>
+                </Grid>
+                <TextBlock x:Uid="lblLatitude/Long"  Style="{StaticResource TitleTextBlockStyle}" Grid.Row="6" Grid.Column="0">Latitude / Long.</TextBlock>
+                <Grid Grid.Row="6" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox  Text="{Binding Lat, Mode=TwoWay}" Grid.Row="0" Grid.Column="0" Margin="0,0,0,10"></TextBox>
+                    <TextBox  Text="{Binding Lng, Mode=TwoWay}" Grid.Row="0" Grid.Column="3" Margin="0,0,0,10"></TextBox>
+                </Grid>
+
+
+
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="2" Margin="30,0,0,0">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel HorizontalAlignment="Stretch">
+                        <Border HorizontalAlignment="Stretch" Background="LightGray" Margin="3,10">
+                            <Image HorizontalAlignment="Stretch" Source="ms-appx:///Assets/placeholder.png"  x:Name="MainImage" Stretch="UniformToFill" Height="245" Width="520"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+                        <TextBox x:Uid="lblBuildingNo/Location" Text="{Binding BlgNoORLoc, Mode=TwoWay}" Header="Building No / Location" Margin="0,0,0,10"></TextBox>
+                        <Button x:Uid="lblSubmitShareReport" x:Name="btnSubmit" Height="50" HorizontalAlignment="Stretch" Click="btnSubmit_Click">Submit Report</Button>
+                        <TextBlock x:Uid="lblStatusmessage" x:Name="statusTextBlock" Text="Status Message" Margin="5,20"  />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

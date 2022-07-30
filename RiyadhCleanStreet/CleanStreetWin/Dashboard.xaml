@@ -1,0 +1,233 @@
+﻿<Page
+    x:Class="CleanStreetWin.Dashboard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CleanStreetWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:telerikPrimitives="using:Telerik.UI.Xaml.Controls.Primitives"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart">
+
+    <UserControl.Resources>
+        <Style TargetType="TextBlock" x:Key="ContentTextBlock">
+            <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
+            <Setter Property="FontWeight" Value="SemiLight"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="8"/>
+        </Style>
+        <SolidColorBrush x:Key="WonBrush" Color="#FF17C5A9"/>
+        <SolidColorBrush x:Key="LostBrush" Color="#FFC33535"/>
+    </UserControl.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="116"/>
+            <RowDefinition Height="Auto" MinHeight="24"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="1" Margin="10,0,0,0">
+            <TextBlock x:Name="pageTitle" Text="Love Riyadh Clean Street" Grid.Column="1" IsHitTestVisible="false" Style="{StaticResource HeaderTextBlockStyle}" Margin="0,48,0,0"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1" Margin="0,0,-618,-618">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="38"/>
+                <RowDefinition Height="Auto" MinHeight="514"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="322"/>
+                <ColumnDefinition Width="Auto" MinWidth="162"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+                <TextBlock x:Name="txtTask" Text="Task>" Style="{StaticResource TitleTextBlockStyle}" Margin="10,0,0,0" />
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <TextBlock x:Name="txtReport" Text="My Reports>" Style="{StaticResource TitleTextBlockStyle}" Margin="10,0,0,0" />
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="2">
+                <TextBlock x:Name="txtPublic" Text="Latest Observations>" Style="{StaticResource TitleTextBlockStyle}" Margin="10,0,0,0" />
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0">
+                <StackPanel Orientation="Vertical">
+                    <telerikPrimitives:RadPictureRotatorHubTile x:Name="statisticsTile" PicturesSource="{Binding}" Padding="0"
+                                                        Width="310" Height="150" VerticalAlignment="Top" telerikPrimitives:HubTileService.GroupTag="FirstLook">
+                        <telerikPrimitives:RadPictureRotatorHubTile.Title>
+                            <Border>
+                                <TextBlock Text="Statistics" Margin="16,16,16,6"/>
+                            </Border>
+                        </telerikPrimitives:RadPictureRotatorHubTile.Title>
+                    </telerikPrimitives:RadPictureRotatorHubTile>
+
+                    <StackPanel Orientation="Horizontal">
+                        <telerikPrimitives:RadHubTile Width="150" Height="150" telerikPrimitives:HubTileService.GroupTag="Home" 
+                                          Title="Calls" ImageSource="../Images/calls.png" Notification="5" Background="#FFED1591"/>
+                        <telerikPrimitives:RadHubTile Width="150" Height="150" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                          Title="Mails" ImageSource="../Images/mails.png" Notification="11" Background="#FF259FD9"/>
+                    </StackPanel>
+                    <telerikPrimitives:RadHubTile Width="310" Height="150" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                          Title="Meetings" ImageSource="../Images/calls.png" Notification="2" Background="#FFD9A125"/>
+
+
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <telerikPrimitives:RadCustomHubTile Width="150" Height="150" telerikPrimitives:HubTileService.GroupTag="FirstLook">
+                            <telerikPrimitives:RadCustomHubTile.FrontContent>
+                                <StackPanel Margin="16,0,0,0" VerticalAlignment="Center">
+                                    <TextBlock Text="12" FontSize="82.667" FontWeight="SemiLight"/>
+                                    <TextBlock Text="OPEN" FontSize="14.667" Margin="4,-12,0,0"/>
+                                    <TextBlock Text="Opportunities" FontSize="12" Margin="4,14,0,0"/>
+                                </StackPanel>
+                            </telerikPrimitives:RadCustomHubTile.FrontContent>
+                            <telerikPrimitives:RadCustomHubTile.BackContent>
+                                <StackPanel Margin="16,0,0,0" VerticalAlignment="Center">
+                                    <TextBlock Text="5" FontSize="82.667" FontWeight="SemiLight"/>
+                                    <TextBlock Text="OVERDUE" FontSize="14.667" Margin="4,-12,0,0"/>
+                                    <TextBlock Text="Opportunities" FontSize="12" Margin="4,14,0,0"/>
+                                </StackPanel>
+                            </telerikPrimitives:RadCustomHubTile.BackContent>
+                        </telerikPrimitives:RadCustomHubTile>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <telerikPrimitives:RadCustomHubTile Width="70" Height="70" telerikPrimitives:HubTileService.GroupTag="FirstLook">
+                            <telerikPrimitives:RadCustomHubTile.FrontContent>
+                                <Border Background="{StaticResource WonBrush}">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Image Source="../Images/won.png" Stretch="None" VerticalAlignment="Center"/>
+                                        <TextBlock Text="43%" FontSize="22" VerticalAlignment="Center" Margin="4,0,0,0"/>
+                                    </StackPanel>
+                                </Border>
+                            </telerikPrimitives:RadCustomHubTile.FrontContent>
+                            <telerikPrimitives:RadCustomHubTile.BackContent>
+                                <Border Background="{StaticResource WonBrush}">
+                                    <TextBlock Text="WON" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </telerikPrimitives:RadCustomHubTile.BackContent>
+                        </telerikPrimitives:RadCustomHubTile>
+                        <telerikPrimitives:RadCustomHubTile Width="70" Height="70" UpdateInterval="0:0:5" telerikPrimitives:HubTileService.GroupTag="FirstLook">
+                            <telerikPrimitives:RadCustomHubTile.FrontContent>
+                                <Border Background="{StaticResource LostBrush}">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Image Source="../Images/lost.png" Stretch="None" VerticalAlignment="Center"/>
+                                        <TextBlock Text="56%" FontSize="22" VerticalAlignment="Center" Margin="4,0,0,0"/>
+                                    </StackPanel>
+                                </Border>
+                            </telerikPrimitives:RadCustomHubTile.FrontContent>
+                            <telerikPrimitives:RadCustomHubTile.BackContent>
+                                <Border Background="{StaticResource LostBrush}">
+                                    <TextBlock Text="LOST" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Border>
+                            </telerikPrimitives:RadCustomHubTile.BackContent>
+                        </telerikPrimitives:RadCustomHubTile>
+                    </StackPanel>
+                    <StackPanel>
+
+                        <telerikPrimitives:RadHubTile Width="150" Height="230" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                          Title="Meetings" ImageSource="../Images/calls.png" Notification="2" Background="#FFD9A125"/>
+
+
+                    </StackPanel>
+
+
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="2">
+                <StackPanel Orientation="Vertical">
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <telerikPrimitives:RadHubTile Width="250" Height="230" telerikPrimitives:HubTileService.GroupTag="Home" 
+                                          Title="Calls" ImageSource="../Images/calls.png" Notification="5" Background="#FFED1591"/>
+                        <telerikPrimitives:RadHubTile Width="250" Height="225" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                          Title="Mails" ImageSource="../Images/mails.png" Notification="11" Background="#FF259FD9"/>
+                        <telerikPrimitives:RadHubTile Width="250" Height="225" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                          Title="Meetings" ImageSource="../Images/calls.png" Notification="2" Background="#FFD9A125"/>
+
+
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <telerikPrimitives:RadHubTile Width="250" Height="230" telerikPrimitives:HubTileService.GroupTag="Home" 
+                                          Title="Calls" ImageSource="../Images/calls.png" Notification="5" Background="#FFED1591"/>
+                        <telerikPrimitives:RadHubTile Width="250" Height="225" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                          Title="Mails" ImageSource="../Images/mails.png" Notification="11" Background="#FF259FD9"/>
+                        <telerikPrimitives:RadHubTile Width="250" Height="225" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                          Title="Meetings" ImageSource="../Images/calls.png" Notification="2" Background="#FFD9A125"/>
+
+
+
+                    </StackPanel>
+
+
+
+
+                </StackPanel>
+            </Grid>
+
+
+        </Grid>
+
+
+
+        <!--<StackPanel Orientation="Horizontal" Grid.Row="2"  Grid.Column="1" Margin="0,24,0,0">
+            <telerikPrimitives:RadMosaicHubTile Width="150" Height="150" VerticalAlignment="Top" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                                PicturesSource="{Binding}" x:Name="mosaicTile" Title="Contacts"/>
+            <telerikPrimitives:RadPictureRotatorHubTile x:Name="statisticsTile" PicturesSource="{Binding}" Padding="0"
+                                                        Width="310" Height="150" VerticalAlignment="Top" telerikPrimitives:HubTileService.GroupTag="FirstLook">
+                <telerikPrimitives:RadPictureRotatorHubTile.Title>
+                    <Border>
+                        <TextBlock Text="Statistics" Margin="16,16,16,6"/>
+                    </Border>
+                </telerikPrimitives:RadPictureRotatorHubTile.Title>
+            </telerikPrimitives:RadPictureRotatorHubTile>
+            <telerikPrimitives:RadPictureRotatorHubTile x:Name="companiesTile" PicturesSource="{Binding}" Padding="0"
+                                                        Width="310" Height="150" VerticalAlignment="Top" telerikPrimitives:HubTileService.GroupTag="FirstLook">
+                <telerikPrimitives:RadPictureRotatorHubTile.Title>
+                    <Border>
+                        <TextBlock Text="Companies" Margin="16,16,16,6"/>
+                    </Border>
+                </telerikPrimitives:RadPictureRotatorHubTile.Title>
+            </telerikPrimitives:RadPictureRotatorHubTile>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3"  Grid.Column="1">
+            <telerikPrimitives:RadHubTile Width="150" Height="150" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                          Title="Calls" ImageSource="../Images/calls.png" Notification="5" Background="#FFED1591"/>
+            <telerikPrimitives:RadHubTile Width="150" Height="150" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                          Title="Mails" ImageSource="../Images/mails.png" Notification="11" Background="#FF259FD9"/>
+            <telerikPrimitives:RadHubTile Width="150" Height="150" telerikPrimitives:HubTileService.GroupTag="FirstLook" 
+                                          Title="Meetings" ImageSource="../Images/calls.png" Notification="2" Background="#FFD9A125"/>
+            <telerikPrimitives:RadCustomHubTile Width="150" Height="150" telerikPrimitives:HubTileService.GroupTag="FirstLook">
+                <telerikPrimitives:RadCustomHubTile.FrontContent>
+                    <StackPanel Margin="16,0,0,0" VerticalAlignment="Center">
+                        <TextBlock Text="12" FontSize="82.667" FontWeight="SemiLight"/>
+                        <TextBlock Text="OPEN" FontSize="14.667" Margin="4,-12,0,0"/>
+                        <TextBlock Text="Opportunities" FontSize="12" Margin="4,14,0,0"/>
+                    </StackPanel>
+                </telerikPrimitives:RadCustomHubTile.FrontContent>
+                <telerikPrimitives:RadCustomHubTile.BackContent>
+                    <StackPanel Margin="16,0,0,0" VerticalAlignment="Center">
+                        <TextBlock Text="5" FontSize="82.667" FontWeight="SemiLight"/>
+                        <TextBlock Text="OVERDUE" FontSize="14.667" Margin="4,-12,0,0"/>
+                        <TextBlock Text="Opportunities" FontSize="12" Margin="4,14,0,0"/>
+                    </StackPanel>
+                </telerikPrimitives:RadCustomHubTile.BackContent>
+            </telerikPrimitives:RadCustomHubTile>
+        </StackPanel>-->
+
+
+    </Grid>
+</Page>

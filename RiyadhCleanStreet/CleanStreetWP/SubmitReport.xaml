@@ -1,0 +1,123 @@
+﻿<Page
+    x:Class="CleanStreetWP.SubmitReport"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CleanStreetWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer 
+                    HorizontalScrollBarVisibility="Disabled" 
+                    VerticalScrollBarVisibility="Auto">
+        <Grid x:Name="LayoutRoot" Background="#004133">
+
+            <Grid.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </Grid.ChildrenTransitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Title Panel -->
+            <StackPanel Grid.Row="0" Margin="19,0,0,0">
+                <TextBlock x:Uid="ApplicationTitle" x:Name="PageHeaderTextBlock" Text="Love Riyadh Clean Streets" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+                <TextBlock x:Uid="ApplicationSubTitle" x:Name="PageSubHeaderTextBlock" Text="Working together for cleaner and greener places" FontSize="11.667"></TextBlock>
+                <TextBlock x:Uid="lblSubmitReportHelp" Text="Submit Report" Margin="0,-7,0,10" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            </StackPanel>
+
+            <!--TODO: Content should be placed within the following grid-->
+            <Grid Grid.Row="1" x:Name="ContentRoot" Margin="15,5,15,0">
+                <!--<Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="500*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <!--<TextBlock x:Uid="lblStreet" Style="{StaticResource TitleTextBlockStyle}" Grid.Row="1" Grid.Column="0">Street</TextBlock>-->
+                <TextBox x:Uid="lblEnterstreetname" x:Name="txtStreet" Text="{Binding StreetName, Mode=TwoWay}" PlaceholderText="Enter Street Name" Grid.Row="1" Grid.Column="1" Margin="0,0,0,10"></TextBox>
+
+                <!--<TextBlock x:Uid="lblDistrict" Style="{StaticResource TitleTextBlockStyle}" Grid.Row="2" Grid.Column="0">District</TextBlock>-->
+                <TextBox x:Uid="lblEnterdistrictname" Text="{Binding DistrictName, Mode=TwoWay}" PlaceholderText="Enter District Name" Grid.Row="2" Grid.Column="1"  Margin="0,0,0,10"></TextBox>
+
+                
+
+               
+                <Grid Grid.Row="3" Grid.Column="1" Margin="0,0,0,10" Height="200">
+                    <Maps:MapControl VerticalAlignment="Stretch" FlowDirection="LeftToRight" MapServiceToken="As3-iIE1YMf0SjuHEno5yZKheFn5x1ke3gVFxFOcozaCms2bM0dkBzCCuqpmlDNT" x:Name="myMap"/>
+                </Grid>
+                <!--<TextBlock x:Uid="lblLatitude/Long" Style="{StaticResource TitleTextBlockStyle}" Grid.Row="6" Grid.Column="0">Latitude / Long.</TextBlock>-->
+                <Grid Grid.Row="4" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox  Text="{Binding Lat, Mode=TwoWay}" Grid.Row="0" Grid.Column="0" Margin="0,0,0,10"></TextBox>
+                    <TextBox  Text="{Binding Lng, Mode=TwoWay}" Grid.Row="0" Grid.Column="3" Margin="0,0,0,10"></TextBox>
+                </Grid>
+
+                <!--<TextBlock x:Uid="lblObservation" Style="{StaticResource TitleTextBlockStyle}" Grid.Row="3" Grid.Column="0">Observation</TextBlock>-->
+                <ComboBox x:Uid="lblEnteryourobservation" x:Name="comboBoxObs" PlaceholderText="Enter Your Observation" 
+                            ItemsSource="{Binding}"
+                            SelectedValue="{Binding ObservationName, Mode=TwoWay}" 
+                            SelectionChanged="ComboBoxObs_SelectionChanged"  Grid.Row="5" Grid.Column="1" Margin="0,0,0,10">
+                </ComboBox>           
+
+                <Grid Grid.Row="6" Grid.Column="2">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel HorizontalAlignment="Stretch">
+                            <Border HorizontalAlignment="Stretch" Background="LightGray" Margin="3,10">
+                                <Image HorizontalAlignment="Stretch" Source="ms-appx:///Assets/placeholder.png"  x:Name="MainImage" Stretch="UniformToFill" Height="170"/>
+                            </Border>
+                        </StackPanel>
+                        <!--<Button x:Uid="lblTakePicture" HorizontalAlignment="Stretch"  Height="20" Click="BtnCameraClick">Take Picture</Button>-->
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+                            <TextBox x:Uid="lblBuildingNo/Location"  Text="{Binding BlgNoORLoc, Mode=TwoWay}" Header="Building No / Location" Margin="0,0,0,10"></TextBox>
+                            <TextBox x:Uid="lblEnterDescription" Text="{Binding Description, Mode=TwoWay}"  Margin="0,0,0,10" PlaceholderText="Enter Details"  TextWrapping="Wrap"></TextBox>
+                            <TextBlock x:Uid="lblStatusmessage" x:Name="statusTextBlock" Text="Status Message" Margin="5,20"  />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+
+
+
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="True" x:Name="appBar">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Uid="lblAppBarHome" Icon="Home" IsCompact="False" Label="Home" Click="HomeAppBarClick"/>
+                <AppBarButton x:Uid="lblSaveReport" Icon="Save" IsCompact="False" Label="Save" x:Name="BtnSave"  Click="BtnSaveClick" />
+                <AppBarButton  x:Uid="lblUpdateReport" Icon="Save" IsCompact="False" Label="Update" x:Name="BtnUpdate" Click="BtnUpdateClick" Visibility="Collapsed" />
+                <AppBarButton x:Uid="lblSharereportAppBar" x:Name="BtnSubmit" Icon="Send" IsCompact="False" Label="Send" Click="btnSubmit_Click"/>
+            </CommandBar.PrimaryCommands>
+            <!--<CommandBar.SecondaryCommands>
+                <AppBarButton Label="Test01"/>
+                <AppBarButton Label="Test02"/>
+            </CommandBar.SecondaryCommands>-->
+        </CommandBar>
+    </Page.BottomAppBar>
+
+
+</Page>

@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="CleanStreetWP.AboutUs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CleanStreetWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Grid x:Name="LayoutRoot" Background="#004133">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock x:Uid="ApplicationTitle" x:Name="PageHeaderTextBlock" Text="Love Riyadh Clean Streets" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock x:Uid="ApplicationSubTitle" x:Name="PageSubHeaderTextBlock" Text="Working together for cleaner and greener places" FontSize="11.667"></TextBlock>
+            <TextBlock x:Uid="lblAbout" Text="About" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+           
+            <TextBlock x:Uid="lblThisisanonofficialRiyadhcitystreetscleaningobservationAp"  Grid.Row="1" Text="This is a non-official Riyadh city streets cleaning observations App to make Riyadh a more clean, green and beautiful place." TextWrapping="Wrap" FontSize="16" />
+            <TextBlock x:Uid="lblTechinical support/feedbackemail" Grid.Row="2" Text="technical support/feedback email: support@mwmsr.net" HorizontalAlignment="Left" Margin="0,20,0,30" />
+
+            <StackPanel Grid.Row="4" VerticalAlignment="Top" Orientation="Horizontal">
+                <Image Source="Assets/StoreLogo.scale-100.png"/>
+                <TextBlock x:Uid="lblPublishedbyCKAT" Text="Published By CKAT"  Margin="5,22,0,0" />
+                <Image Source="Assets/twitter.png" Width="50" Margin="15,0,0,0"/>
+                <TextBlock FlowDirection="LeftToRight" Text="@chaudarywajid"  Margin="5,22,0,0" />
+
+                <TextBlock  Text="" />
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="True" x:Name="appBar">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Uid="lblAppBarHome" Icon="Home" IsCompact="False" Label="Home" Click="HomeAppBarClick"/>
+                <AppBarButton x:Uid="lblAppBarHelp" Icon="Help" IsCompact="False" Label="Help" Click="HelpAppBarClick"/>
+            </CommandBar.PrimaryCommands>
+            <!--<CommandBar.SecondaryCommands>
+                <AppBarButton Label="Test01"/>
+                <AppBarButton Label="Test02"/>
+            </CommandBar.SecondaryCommands>-->
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

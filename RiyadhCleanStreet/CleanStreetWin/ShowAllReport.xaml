@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="CleanStreetWin.ShowAllReport"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CleanStreetWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <CollectionViewSource x:Name="myReportCollectionViewSource" />
+    </Page.Resources>
+
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" HorizontalScrollMode="Enabled" VerticalScrollBarVisibility="Hidden">
+        <Grid Background="#004133">
+            <Grid x:Name="mainGrid" Margin="30,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Margin="0,30,0,0" Grid.Row="0" Grid.Column="1" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <AppBarButton Name="BackButton" Icon="Back" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" VerticalAlignment="Center" Click="BackButton_Click" HorizontalAlignment="Left" ></AppBarButton>
+                    <TextBlock x:Uid="ApplicationTitle" x:Name="PageHeaderTextBlock" Text="Love Riyadh Clean Streets" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
+                    <TextBlock x:Uid="ApplicationSubTitle" x:Name="PageSubHeaderTextBlock" Text="Working together for cleaner and greener places" FontSize="14.667" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"></TextBlock>
+                </Grid>
+
+                <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,0,0">
+                    <GridView x:Name="ReportsGrid" 
+                              SelectionMode="None" 
+                              ItemClick="MyReportsGridView_ItemClick"  
+                              IsItemClickEnabled= "True" 
+                              ItemsSource="{Binding Source={StaticResource myReportCollectionViewSource}}">
+                        <GridView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid HorizontalAlignment="Left" Width="250" Height="250">
+                                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                                        <Image x:Name="foPhoto" Source="{Binding Photo}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+                                    </Border>
+                                    <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                                        <TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextBlockStyle}" Height="60" Margin="15,0,15,0"/>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapGrid ItemWidth="250" ItemHeight="250" Orientation="Vertical" 
+                                      VerticalChildrenAlignment="Center" MaximumRowsOrColumns="2"></WrapGrid>
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+
+                    </GridView>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+   
+</Page>

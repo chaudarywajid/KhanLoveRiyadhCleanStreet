@@ -1,0 +1,108 @@
+﻿<Page
+    x:Class="CleanStreetWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CleanStreetWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <CollectionViewSource x:Name="taskCollectionViewSource" />
+        <CollectionViewSource x:Name="myReportCollectionViewSource" />
+        <CollectionViewSource x:Name="observationsCollectionViewSource" />
+    </Page.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Hub Background="#00A651" SectionHeaderClick="SectionHeader_Click">
+        <!--<Hub SectionHeaderClick="SectionHeader_Click">
+            <Hub.Background>
+                <ImageBrush ImageSource="Assets/hero-image.png" Stretch="UniformToFill"></ImageBrush>
+            </Hub.Background>-->
+            <Hub.Header>
+                <Grid Margin="0,10,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Uid="ApplicationTitle" x:Name="PageHeaderTextBlock" Text="Love Riyadh Clean Streets" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
+                    <TextBlock x:Uid="ApplicationSubTitle" x:Name="PageSubHeaderTextBlock" Text="Working together for cleaner and greener places" FontSize="14.667" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"></TextBlock>
+                </Grid>
+            </Hub.Header>
+            <!--<HubSection>
+                    <HubSection.Background>
+                        <ImageBrush ImageSource="Assets/hero-image.png" Stretch="UniformToFill"></ImageBrush>
+                    </HubSection.Background>
+            </HubSection>-->
+
+            <HubSection x:Uid="lblTasks" Header="Tasks" Background="#00A651">
+                    <DataTemplate>
+                        <ListView x:Name="MyTasksListView" SelectionMode="None" 
+                              ItemClick="MyTasksListView_ItemClick"  
+                                IsItemClickEnabled= "True" 
+                              ItemsSource="{Binding Source={StaticResource taskCollectionViewSource}}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Background="DarkGreen" Margin="0,0,0,10">
+                                        <Image Source="{Binding Image}" Width="110" Height="110"></Image>
+                                        <StackPanel Orientation="Vertical"  Margin="5">
+                                            <TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextBlockStyle}" Margin="5,5,5,15"></TextBlock>
+                                            <TextBlock Text="{Binding Description}" Width="200" TextWrapping="Wrap" Margin="5,0"></TextBlock>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </DataTemplate>
+
+
+                </HubSection>
+
+                <HubSection x:Uid="lblMyReports"  x:Name="MyReports" Header="My Reports" IsHeaderInteractive="True"  
+                Background="#00A651">
+                    <DataTemplate>
+                        <GridView x:Name="ReportsGrid" 
+                              SelectionMode="None" 
+                              ItemClick="MyReportsGridView_ItemClick"  
+                              IsItemClickEnabled= "True" 
+                              ItemsSource="{Binding Source={StaticResource myReportCollectionViewSource}}">
+                            <GridView.ItemTemplate>
+                                <DataTemplate>
+                                <Grid HorizontalAlignment="Left" Width="250" Height="250" Margin="0,0,0,20">
+                                        <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                                            <Image x:Name="foPhoto" Source="{Binding Photo}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+                                        </Border>
+                                        <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                                            <TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" Height="80" Margin="10,0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+
+                        <GridView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapGrid ItemWidth="250" ItemHeight="250" 
+                                              Orientation="Horizontal" VerticalChildrenAlignment="Center"
+                                              MaximumRowsOrColumns="2"></WrapGrid>
+                                </ItemsPanelTemplate>
+                            </GridView.ItemsPanel>
+
+                        </GridView>
+
+                    </DataTemplate>
+                </HubSection>
+
+                <HubSection x:Uid="lblSearchreport" x:Name="SearchReports" Header="Search Reports" Margin="0,0,0,0" Padding="0,0,0,0" 
+                            >
+                <HubSection.Background>
+                    <ImageBrush ImageSource="Assets/hero-image-medium.png" Stretch="UniformToFill"></ImageBrush>
+                </HubSection.Background>
+                <DataTemplate x:Name="DTSearchReports">
+                        <StackPanel Orientation="Vertical" x:Name="SPSearchReports">
+                            <DatePicker x:Uid="lblPickerDate" x:Name="pickerDate" DateChanged="pickerDate_DateChanged"  Header="Search Term" />
+                        </StackPanel>
+                    </DataTemplate>
+                </HubSection>
+            </Hub>
+        </Grid>
+</Page>

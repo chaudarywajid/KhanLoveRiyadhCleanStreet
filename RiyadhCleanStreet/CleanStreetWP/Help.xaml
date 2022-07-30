@@ -1,0 +1,101 @@
+﻿<Page
+    x:Class="CleanStreetWP.Help"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CleanStreetWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer 
+                    HorizontalScrollBarVisibility="Disabled" 
+                    VerticalScrollBarVisibility="Auto">
+        <Grid x:Name="LayoutRoot" Background="#004133">
+
+            <Grid.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </Grid.ChildrenTransitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Title Panel -->
+            <StackPanel Grid.Row="0" Margin="19,0,0,0">
+                <TextBlock x:Uid="ApplicationTitle" x:Name="PageHeaderTextBlock" Text="Love Riyadh Clean Streets" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+                <TextBlock x:Uid="ApplicationSubTitle" x:Name="PageSubHeaderTextBlock" Text="Working together for cleaner and greener places" FontSize="11.667"></TextBlock>
+                <TextBlock x:Uid="lblHelpTxt" Text="Help" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            </StackPanel>
+
+            <!--TODO: Content should be placed within the following grid-->
+            <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0">
+                    <TextBlock x:Uid="lblThisisgeneralguidelines" 
+                            Text="This is general guidlines how to use the application functionalities." 
+                            TextWrapping="Wrap" FontSize="16" />
+                </StackPanel>
+                <StackPanel Grid.Row="1">
+                    <TextBlock x:Uid="lblSubmitReportHelp" Text="Submit Report" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,5" />
+                    <TextBlock x:Uid="lblYoumayaddnewreporttotheapplication"  HorizontalAlignment="Left"
+                            Text="You may add new report to the application on 
+                               clicking the submit report title on main screen. 
+                               once you click the title this will land you in the 
+                               report submision detail page where you can enter the 
+                               street name the district name and observation name. Take Observation picture and save the record into you local storage, system will take the location information additional if allowed by user to tag the picture at current location." 
+                            TextWrapping="Wrap" FontSize="16" />
+                </StackPanel>
+
+                <StackPanel Grid.Row="2">
+                    <TextBlock x:Uid="lblShowReportHelp" Text="Show Report" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,5" />
+                    <TextBlock x:Uid="lblShowreportwilldisplayallyourlocallysavedreports" HorizontalAlignment="Left"
+                            Text="Show Report will display all your locally saved reports and you may submit/share report with anyone via share contract or by clicking on submit button while you are on the report detail page." 
+                            TextWrapping="Wrap" FontSize="16" />
+                </StackPanel>
+
+                <StackPanel Grid.Row="3">
+                    <TextBlock x:Uid="lblSharereport" Text="Share Report" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,5" />
+                    <TextBlock x:Uid="lblYoumaysharesubmityourreporttoanyone" HorizontalAlignment="Left"
+                            Text="You may share/submit your report to anyone using the submit button on the report detail page. On Share charm please select the mail application to share your report with picture and location details." 
+                            TextWrapping="Wrap" FontSize="16" />
+                </StackPanel>
+
+                <StackPanel Grid.Row="4">
+                    <TextBlock x:Uid="lblSearchreportsHelp" Text="Search Report" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,5" />
+                    <TextBlock x:Uid="lblReportcanbesearchedusingthedatepicker" HorizontalAlignment="Left"
+                            Text="Report can be searched using the date picker on the right section of you application. Once you select your input date and click on OK button system will search all report based on input date." 
+                            TextWrapping="Wrap" FontSize="16" />
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+
+
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="True" x:Name="appBar">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Uid="lblAppBarHome" Icon="Home" IsCompact="False" Label="Home" Click="HomeAppBarClick"/>
+                <AppBarButton x:Uid="lblAppBarAbout" Icon="ContactInfo" IsCompact="False" Label="About" Click="AboutAppBarClick"/>
+                
+            </CommandBar.PrimaryCommands>
+            <!--<CommandBar.SecondaryCommands>
+                <AppBarButton Label="Test01"/>
+                <AppBarButton Label="Test02"/>
+            </CommandBar.SecondaryCommands>-->
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
